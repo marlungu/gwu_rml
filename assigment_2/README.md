@@ -90,8 +90,71 @@ exp.model_train()
 ```
 exp.model_explain()
 ```
+
+### Global-Explainability
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/glm_global.png">
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/glm_global2.png">
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/glm_global3.png">
+
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/egb_global.png">
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/egb_global.png">
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/egb_global.png">
+
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/ebm_global.png">
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/ebm_global2.png">
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/ebm_global3.png">
+
+
+### Local-Explainability
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/glm_local.png">
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/xgb_local.png">
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/ebm_local.png">
-<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/ebm2_local.png">
-<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/ebm3_local.png">
+
+### Model interpretations
+
+```
+exp.model_interpret()
+```
+
+#### GLM Global Interpretability
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/glm_inter.png">
+
+#### GLM Local Interpretability
+
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/glm_inter_loc.png">
+
+#### EGB2 Global Interpretability
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/xbg_inter.png">
+
+#### EGB2 Local  Interpretability
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/xgb_inter_local.png">
+
+####  EBM Global Interpretability
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/ebm_inter_gl.png">
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/ebl_inter_gl.png">
+
+#### EBM Local  Interpretability
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/ebm_inter_loc.png">
+
+
+### Diagnose and Compare
+
+```
+exp.model_diagnose()
+```
+#### GLM
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/glm_d.png">
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/glm_d2.png">
+
+#### XGB2
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/egb_d.png">
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/egb_d2.png">
+
+#### EBM
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/ebm_d.png">
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/ebm_d2.png">
+
+```
+exp.model_compare()
+```
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/compare.png">
