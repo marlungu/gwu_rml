@@ -1,5 +1,3 @@
-<div align="center">
-
 **Assigment 2**
 
 
@@ -30,3 +28,12 @@ exp.data_loader(data=data)
 test = pd.read_csv('/content/drive/MyDrive/ResponsibleMachineLearning/data/hmda_test_preprocessed.csv')
 
 ```
+
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/data.png">
+
+```
+exp.data_summary()
+```
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/data_summary.png">
+
+
