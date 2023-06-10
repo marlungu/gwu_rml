@@ -153,8 +153,8 @@ exp.model_diagnose()
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/glm_d2.png">
 
 #### XGB2
-<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/egb_d.png">
-<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/egb_d2.png">
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/xgb_d.png">
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/xgb_d2.png">
 
 #### EBM
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data/ebm_d.png">
