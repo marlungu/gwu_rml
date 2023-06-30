@@ -19,11 +19,9 @@
 
 * Data:
 
-```
 
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data.png">
 
-```
 
 * **Source of training data**: GWU Blackboard, email `jphall@gwu.edu` for more information
 * **How training data was divided into training and validation data**: 70% training, 30% validation
@@ -67,3 +65,25 @@ DecisionTreeClassifier(ntrees=1,
                         model_id=model_id
                        )
 ```
+
+### Quantitative Analysis
+
+* Models were assessed primarily with AUC and AIR. See details below:
+
+| Train AUC | Validation AUC 
+| --------- | -------------- 
+| 0.970011  | 0.623467
+
+| Group | Validation AIR |
+|-------|-----|
+| Black vs. White | 0.8345 |
+| Hispanic vs. White | 0.8765 |
+| Asian vs. White | 1.098 |
+| Female vs. Male | 1.245 |
+
+
+#### Correlation Heatmap
+
+![Correlation Heatmap](correletion_map.png)
+
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/correletion_map.png">
