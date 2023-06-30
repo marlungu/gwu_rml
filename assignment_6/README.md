@@ -21,9 +21,49 @@
 
 ```
 
-<img src="https://github.com/marlungu/gwu_rml/blob/main/assigment_2/data.png">
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data.png">
 
 ```
 
-* Training rows: 112,253
-* Validation rows: 48,085
+* **Source of training data**: GWU Blackboard, email `jphall@gwu.edu` for more information
+* **How training data was divided into training and validation data**: 70% training, 30% validation
+* **Number of rows in training and validation data**:
+  * Training rows: 112,253
+  * Validation rows: 48,085
+
+
+### Test Data
+
+* **Source of test data**: GWU Blackboard, email `jphall@gwu.edu` for more information
+* **Number of rows in test data**: 7,500
+* **State any differences in columns between training and test data**: None
+
+
+### Model details
+
+* **Columns used as inputs in the final model**: 
+        'income_std',
+        'no_intro_rate_period_std',
+        'debt_to_income_ratio_missing',
+        'conforming',
+        'intro_rate_period_std',
+        'property_value_std',
+        'debt_to_income_ratio_std',
+        'term_360'
+* **Column(s) used as target(s) in the final model**: 'high_priced'
+* **Type of model**: Decision Tree
+* **Software used to implement the model**: Python, scikit-learn
+* **Version of the modeling software**: 1.0.2
+* **Hyperparameters or other settings of your model**:
+
+```
+DecisionTreeClassifier(ntrees=1,
+                        sample_rate=1,  # use all rows in that tree
+                        mtries=-2,  # use all columns in that tree's split search
+                        max_depth=4,  # shallow trees are easier to understand
+                        seed=seed_,  # set random seed for reproducibility
+                        nfolds=3,  # cross-validation for stability and ...
+                        # only way to get metrics for 1 tree in h2o
+                        model_id=model_id
+                       )
+```
