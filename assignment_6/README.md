@@ -106,3 +106,18 @@ DecisionTreeClassifier(ntrees=1,
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/residuals.png">
 
 ### Plot tree depth vs. training and validation AUC
+
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/tr_val.png">
+
+
+### View results as a table, using pandas iloc to remove first column of table
+
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/results.png">
+
+
+### Create a DataFrame for visualization & Sort by importance
+
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/feut_imp.png">
+
+### Bias
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/bias.png">
