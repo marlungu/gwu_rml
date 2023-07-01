@@ -39,7 +39,6 @@
 ### Test Data
 
 * **Source of test data**: GWU Blackboard, email `jphall@gwu.edu` for more information
-* **Number of rows in test data**: 48,085
 * **State any differences in columns between training and test data**: None
 
 
@@ -88,10 +87,13 @@ DecisionTreeClassifier(ntrees=1,
 
 ### Grid Search AIR vs. AUC for EBMs
 
-![Grid Search AIR vs. AUC for EBMs](grid_search.png)
+![Grid Search AIR vs. AUC for EBMs](grid.png)
 
+* Below, we have a scatter plot of the Adverse Impact Ratio (AIR) against the Area Under the Receiver Operating Characteristic Curve (AUC) for the Explainable Boosting Machine (EBM) model. This plot enables us to examine the trade-off between fairness (as measured by AIR) and model performance (as measured by AUC).
+The red vertical line drawn at AIR = 0.8 represents a fairness threshold. Any model falling to the right of this line would be fair according to the Four-Fifths Rule, commonly used in employment practices to measure disparate impact.
 ### Visualize simulated data
 
+* Here we have histograms for each feature in the random_frame DataFrame, where each histogram displays the distribution of values for one feature.
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/vis1.png">
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/vis2.png">
 
@@ -117,7 +119,7 @@ DecisionTreeClassifier(ntrees=1,
 
 ### Create a DataFrame for visualization & Sort by importance
 
-This extracts the feature importance scores from the model. Feature importance scores indicate how useful or valuable each feature was in constructing the boosted decision trees within the model. The higher the score, the more important the feature.
+* This extracts the feature importance scores from the model. Feature importance scores indicate how useful or valuable each feature was in constructing the boosted decision trees within the model. The higher the score, the more important the feature.
 
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/feut_imp.png">
 
