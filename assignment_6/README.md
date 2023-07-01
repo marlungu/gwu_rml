@@ -6,7 +6,7 @@
 * **Model date**: June 30, 2023
 * **Model version**: 1.0
 * **License**: MIT
-* **Model implementation code**: [DNSC_6301_HMDA_Project.ipynb](https://github.com/marlungu/gwu_rml/blob/main/assignment_6/assignment_6.ipynb)
+* **Model implementation code**: [DNSC_6290_HMDA_Project.ipynb](https://github.com/marlungu/gwu_rml/blob/main/assignment_6/assignment_6.ipynb)
 
 ### Intended Use
 
