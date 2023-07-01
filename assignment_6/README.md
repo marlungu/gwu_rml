@@ -22,7 +22,13 @@
 
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/data.png">
 
-
+ * Columns:
+        'row_id', 'black', 'asian', 'white', 'amind', 'hipac', 'hispanic',
+        'non_hispanic', 'male', 'female', 'agegte62', 'agelt62', 'term_360',
+        'conforming', 'debt_to_income_ratio_missing', 'loan_amount_std',
+        'loan_to_value_ratio_std', 'no_intro_rate_period_std',
+        'intro_rate_period_std', 'property_value_std', 'income_std',
+        'debt_to_income_ratio_std', 'high_priced'
 * **Source of training data**: GWU Blackboard, email `jphall@gwu.edu` for more information
 * **How training data was divided into training and validation data**: 70% training, 30% validation
 * **Number of rows in training and validation data**:
@@ -33,21 +39,15 @@
 ### Test Data
 
 * **Source of test data**: GWU Blackboard, email `jphall@gwu.edu` for more information
-* **Number of rows in test data**: 7,500
+* **Number of rows in test data**: 48,085
 * **State any differences in columns between training and test data**: None
 
 
 ### Model details
 
 * **Columns used as inputs in the final model**: 
-        'income_std',
-        'no_intro_rate_period_std',
-        'debt_to_income_ratio_missing',
-        'conforming',
-        'intro_rate_period_std',
-        'property_value_std',
-        'debt_to_income_ratio_std',
-        'term_360'
+       'term_360', 'conforming', 'debt_to_income_ratio_missing', 'loan_amount_std', 'loan_to_value_ratio_std', 'no_intro_rate_period_std',
+           'intro_rate_period_std', 'property_value_std', 'income_std', 'debt_to_income_ratio_std'
 * **Column(s) used as target(s) in the final model**: 'high_priced'
 * **Type of model**: Decision Tree
 * **Software used to implement the model**: Python, scikit-learn
@@ -76,10 +76,10 @@ DecisionTreeClassifier(ntrees=1,
 
 | Group              | Validation AIR |
 |--------------------|----------------|
-| Black vs. White    |         0.8345 |
+| Black vs. White    |         0.816 |
 | Hispanic vs. White |         0.8765 |
-| Asian vs. White    |          1.098 |
-| Female vs. Male    |          1.245 |
+| Asian vs. White    |          1.208 |
+| Female vs. Male    |          0.948 |
 
 
 #### Correlation Heatmap
@@ -117,7 +117,10 @@ DecisionTreeClassifier(ntrees=1,
 
 ### Create a DataFrame for visualization & Sort by importance
 
+This extracts the feature importance scores from the model. Feature importance scores indicate how useful or valuable each feature was in constructing the boosted decision trees within the model. The higher the score, the more important the feature.
+
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/feut_imp.png">
 
+From the resulting plot, you can observe which features impact the model's predictions most.
 ### Bias
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/bias.png">
