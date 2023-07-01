@@ -22,7 +22,7 @@
 
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/data.png">
 
- * Columns:
+* **Dataset Columns**:
         'row_id', 'black', 'asian', 'white', 'amind', 'hipac', 'hispanic',
         'non_hispanic', 'male', 'female', 'agegte62', 'agelt62', 'term_360',
         'conforming', 'debt_to_income_ratio_missing', 'loan_amount_std',
@@ -85,6 +85,31 @@ DecisionTreeClassifier(ntrees=1,
 
 ![Correlation Heatmap](correletion_map.png)
 
+### Explainable Boosting Machine
+
+```
+# dictionary of hyperparameter value lists for grid search
+gs_params = {'max_bins': [128, 256, 512],
+             'max_interaction_bins': [16, 32, 64],
+             'interactions': [5, 10, 15],
+             'outer_bags': [4, 8, 12],
+             'inner_bags': [0, 4],
+             'learning_rate': [0.001, 0.01, 0.05],
+             'validation_size': [0.1, 0.25, 0.5],
+             'min_samples_leaf': [1, 2, 5, 10],
+             'max_leaves': [1, 3, 5]}
+```
+> gs_params dictionary contains different hyperparameters for the EBM model as keys and lists of values for those hyperparameters as values. These parameters include:
+max_bins: The maximum number of bins to use for numeric features.
+max_interaction_bins: The maximum number of bins to use for interaction features.
+interactions: The number of interaction terms to use in the model.
+outer_bags: The number of outer bagging iterations to use.
+inner_bags: The number of inner bagging iterations to use.
+learning_rate: The learning rate for the boosting process.
+validation_size The proportion of the dataset to include in the validation split.
+min_samples_leaf: The minimum number of samples required at a leaf node.
+max_leaves: The maximum number of leaves in any tree.
+
 ### Grid Search AIR vs. AUC for EBMs
 
 Below, we have a scatter plot of the Adverse Impact Ratio (AIR) against the Area Under the Receiver Operating Characteristic Curve (AUC) for the Explainable Boosting Machine (EBM) model. This plot enables us to examine the trade-off between fairness (as measured by AIR) and model performance (as measured by AUC).
@@ -104,10 +129,25 @@ Here we have histograms for each feature in the random_frame DataFrame, where ea
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/stress2.png">
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/stress3.png">
 
-### Residual Analysis Plot
-<img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/residuals.png">
 
-> Residuals are very unbalanced. This model struggles to predict when customers will recieve a high-priced loan correctly. It does much better when predicting customers will NOT receive a high-priced loan. There are also some very noticable outliers.
+### Bias (Investigate the model for Discrimination)
+
+|  | cut  | f1       |  acc     | air     |
+|--|-----:|---------:|---------:|--------:|
+|22| 0.22 | 0.356794 | 0.832942 | 0.816260|
+|23| 0.23 | 0.350179 | 0.841156 | 0.843019|
+|24| 0.24 | 0.341709 | 0.850161 | 0.864101|
+|25| 0.25 | 0.330154 | 0.858313 | 0.878680|
+|26| 0.26 | 0.316466 | 0.865155 | 0.887407|
+
+##### Cutoffs in the 0.22-0.26 range provide increased accuracy and less bias toward others
+
+
+### Residual Analysis Plot
+
+> Below, we can see that residuals are very unbalanced. This model struggles to predict when customers will receive a high-priced loan correctly. It does much better when predicting customers will NOT receive a high-priced loan. There are also some very noticeable outliers.
+
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/residuals.png">
 
 ### Plot tree depth vs. training and validation AUC
 
@@ -116,7 +156,8 @@ Decision Tree Classifier for various depths (1 to 20) computes the Area Under th
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/tr_val.png">
 
 
-### View results as a table, using pandas iloc to remove first column of table
+### View results as a table 
+<!-- , using pandas iloc to remove first column of table -->
 
 |      | Training AUC  | Validation AUC |
 |------|:-------------:|---------------:|
@@ -152,5 +193,3 @@ Decision Tree Classifier for various depths (1 to 20) computes the Area Under th
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/feut_imp.png">
 
 From the resulting plot, you can observe which features impact the model's predictions most.
-### Bias
-<img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/bias.png">
