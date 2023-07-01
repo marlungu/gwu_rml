@@ -87,13 +87,13 @@ DecisionTreeClassifier(ntrees=1,
 
 ### Grid Search AIR vs. AUC for EBMs
 
-![Grid Search AIR vs. AUC for EBMs](grid.png)
-
-> Below, we have a scatter plot of the Adverse Impact Ratio (AIR) against the Area Under the Receiver Operating Characteristic Curve (AUC) for the Explainable Boosting Machine (EBM) model. This plot enables us to examine the trade-off between fairness (as measured by AIR) and model performance (as measured by AUC).
+Below, we have a scatter plot of the Adverse Impact Ratio (AIR) against the Area Under the Receiver Operating Characteristic Curve (AUC) for the Explainable Boosting Machine (EBM) model. This plot enables us to examine the trade-off between fairness (as measured by AIR) and model performance (as measured by AUC).
 The red vertical line drawn at AIR = 0.8 represents a fairness threshold. Any model falling to the right of this line would be fair according to the Four-Fifths Rule, commonly used in employment practices to measure disparate impact.
+
+![Grid Search AIR vs. AUC for EBMs](grid.png)
 ### Visualize simulated data
 
-> Here we have histograms for each feature in the random_frame DataFrame, where each histogram displays the distribution of values for one feature.
+Here we have histograms for each feature in the random_frame DataFrame, where each histogram displays the distribution of values for one feature.
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/vis1.png">
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/vis2.png">
 
@@ -110,6 +110,8 @@ The red vertical line drawn at AIR = 0.8 represents a fairness threshold. Any mo
 > Residuals are very unbalanced. This model struggles to predict when customers will recieve a high-priced loan correctly. It does much better when predicting customers will NOT receive a high-priced loan. There are also some very noticable outliers.
 
 ### Plot tree depth vs. training and validation AUC
+
+Decision Tree Classifier for various depths (1 to 20) computes the Area Under the ROC Curve (AUC) for the training and validation sets.
 
 <img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/tr_val.png">
 
