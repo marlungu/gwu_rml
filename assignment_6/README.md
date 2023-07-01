@@ -118,7 +118,31 @@ Decision Tree Classifier for various depths (1 to 20) computes the Area Under th
 
 ### View results as a table, using pandas iloc to remove first column of table
 
-<img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/results.png">
+|      | Training AUC  | Validation AUC |
+|------|:-------------:|---------------:|
+| 0    | 0.697141      | 0.692440       |
+| 1    | 0.747007      | 0.742198       |
+| 3    | 0.787190      | 0.786166       |
+| 4    | 0.804219      | 0.801483       |
+| 5    | 0.812611      | 0.806100       |
+| 6    | 0.820184      | 0.807270       |
+| 7    | 0.828544      | 0.806489       |
+| 8    | 0.836905      | 0.802915       |
+| 9    | 0.846124      | 0.794189       |
+| 10   | 0.856340      | 0.783777       |
+| 11   | 0.868401      | 0.769902       |
+| 12   | 0.882286      | 0.752769       |
+| 13   | 0.895562      | 0.737576       |
+| 14   | 0.909777      | 0.718061       |
+| 15   | 0.924238      | 0.702308       |
+| 16   | 0.937470      | 0.683528       |
+| 17   | 0.949437      | 0.663831       |
+| 18   | 0.960672      | 0.642775       |
+| 19   | 0.970011      | 0.623467       |
+
+<!-- <img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/results.png"> -->
+
+> Training and validation AUC are relatively close at lower depths (closer to 0 index), indicating the model is neither overfitting nor underfitting. We achieve the maximum AUC for the validation set at a tree depth of 6, with an AUC score of approximately 0.807270. After this point, while the training AUC increases, the validation AUC decreases as the tree depth increases. This is a typical sign of overfitting, as the model is becoming too complex and is starting to fit the noise in the training data.
 
 
 ### Create a DataFrame for visualization & Sort by importance
