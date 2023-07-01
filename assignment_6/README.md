@@ -20,7 +20,7 @@
 * Data:
 
 
-<img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data.png">
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/data.png">
 
 
 * **Source of training data**: GWU Blackboard, email `jphall@gwu.edu` for more information
@@ -74,16 +74,35 @@ DecisionTreeClassifier(ntrees=1,
 | --------- | -------------- 
 | 0.970011  | 0.623467
 
-| Group | Validation AIR |
-|-------|-----|
-| Black vs. White | 0.8345 |
-| Hispanic vs. White | 0.8765 |
-| Asian vs. White | 1.098 |
-| Female vs. Male | 1.245 |
+| Group              | Validation AIR |
+|--------------------|----------------|
+| Black vs. White    |         0.8345 |
+| Hispanic vs. White |         0.8765 |
+| Asian vs. White    |          1.098 |
+| Female vs. Male    |          1.245 |
 
 
 #### Correlation Heatmap
 
 ![Correlation Heatmap](correletion_map.png)
 
-<img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/correletion_map.png">
+### Grid Search AIR vs. AUC for EBMs
+
+![Grid Search AIR vs. AUC for EBMs](grid_search.png)
+
+### Visualize simulated data
+
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/vis1.png">
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/vis2.png">
+
+### Sensitivity Analysis: Stress Testing
+#### Simulate recession conditions in validation da
+
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/stress1.png">
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/stress2.png">
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/stress3.png">
+
+### Global residuals
+<img src="https://github.com/marlungu/gwu_rml/blob/main/assignment_6/data/residuals.png">
+
+### Plot tree depth vs. training and validation AUC
