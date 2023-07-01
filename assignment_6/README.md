@@ -10,8 +10,8 @@
 
 ### Intended Use
 
-* **Primary intended uses**: This model is an *example* probability of default classifier, with an *example* use case for determining eligibility for a credit line increase.
-* **Primary intended users**: Students in GWU DNSC 6301 bootcamp.
+* **Primary intended uses**: This model is not intended for business use; it's been developed for educational purposes. Its primary goal is to facilitate understanding and learning.
+* **Primary intended users**: Students in GWU.
 * **Out-of-scope use cases**: Any use beyond an educational example is out-of-scope.
 
 
