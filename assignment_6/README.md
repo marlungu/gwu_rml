@@ -99,16 +99,16 @@ gs_params = {'max_bins': [128, 256, 512],
              'min_samples_leaf': [1, 2, 5, 10],
              'max_leaves': [1, 3, 5]}
 ```
-> gs_params dictionary contains different hyperparameters for the EBM model as keys and lists of values for those hyperparameters as values. These parameters include:
-max_bins: The maximum number of bins to use for numeric features.
-max_interaction_bins: The maximum number of bins to use for interaction features.
-interactions: The number of interaction terms to use in the model.
-outer_bags: The number of outer bagging iterations to use.
-inner_bags: The number of inner bagging iterations to use.
-learning_rate: The learning rate for the boosting process.
-validation_size The proportion of the dataset to include in the validation split.
-min_samples_leaf: The minimum number of samples required at a leaf node.
-max_leaves: The maximum number of leaves in any tree.
+#### gs_params dictionary contains different hyperparameters for the EBM model as keys and lists of values for those hyperparameters as values. These parameters include:
+* **max_bins**: The maximum number of bins to use for numeric features.
+* **max_interaction_bins**: The maximum number of bins to use for interaction features.
+* **interactions**: The number of interaction terms to use in the model.
+* **outer_bags**: The number of outer bagging iterations to use.
+* **inner_bags**: The number of inner bagging iterations to use.
+* **learning_rate**: The learning rate for the boosting process.
+* **validation_size**: The proportion of the dataset to include in the validation split.
+* **min_samples_leaf**: The minimum number of samples required at a leaf node.
+* **max_leaves**: The maximum number of leaves in any tree.
 
 ### Grid Search AIR vs. AUC for EBMs
 
