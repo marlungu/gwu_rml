@@ -99,7 +99,7 @@ gs_params = {'max_bins': [128, 256, 512],
              'min_samples_leaf': [1, 2, 5, 10],
              'max_leaves': [1, 3, 5]}
 ```
-#### **gs_params** dictionary contains different hyperparameters for the EBM model as keys and lists of values for those hyperparameters as values. These parameters include:
+###### * **gs_params** dictionary contains different hyperparameters for the EBM model as keys and lists of values for those hyperparameters as values. These parameters include:
 * **max_bins**: The maximum number of bins to use for numeric features.
 * **max_interaction_bins**: The maximum number of bins to use for interaction features.
 * **interactions**: The number of interaction terms to use in the model.
